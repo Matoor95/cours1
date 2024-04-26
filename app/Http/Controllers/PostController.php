@@ -40,10 +40,12 @@ class PostController extends Controller
     public function store(Request $request)
     {
         //
+        Post::create($request->all());
+        return redirect()->route('posts.index');
     }
 
     /**
-     * Display the specified resource.
+     * Display the specified resource.`
      */
     public function show(string $id)
     {
